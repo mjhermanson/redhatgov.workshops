@@ -304,7 +304,7 @@ objects:
             #oc new-app -f https://raw.githubusercontent.com/RHsyseng/docker-rhel-sonarqube/master/templates/sonarqube-ephemeral-template.yaml --param=SONARQUBE_SERVICE_NAME=sonarqube
             #oc new-app registry.centos.org/rhsyseng/sonarqube
             #oc expose svc/sonarqube
-            oc new-app -f https://raw.githubusercontent.com/mjhermanson/redhatgov.workshops/ocp-4.2/devsecops-workshop/sonarqube-template.yaml --param=SONARQUBE_VERSION=6.7
+            oc new-app -f http://bit.ly/openshift-sonarqube-embedded-template --param=SONARQUBE_VERSION=7.0 --param=SONAR_MAX_MEMORY=4Gi
             
             if [ "${WITH_CHE}" == "true" ] ; then
               oc process -f https://raw.githubusercontent.com/mjhermanson/redhatgov.workshops/ocp-4.2/devsecops-workshop/che-single-user.yml \
