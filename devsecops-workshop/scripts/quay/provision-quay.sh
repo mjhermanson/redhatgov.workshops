@@ -1,15 +1,15 @@
 #!/bin/bash
 
-hostname=
-clusteradmin=
-clusteradminpass=
-domain=
+hostname=https://master.stratcom-d547.open.redhat.com
+clusteradmin=opentlc-mgr
+clusteradminpass=r3dh4t1!
+domain=apps.stratcom-d547.open.redhat.com
 prefix=user
 begin=1
-count=1
-ocuserpass=
-quayiouser=
-quayiopassword=
+count=50
+ocuserpass=openshift
+quayiouser=coreos+rhcp
+quayiopassword=L6ZXXVHD9XLQ7PR7HBNRW2FAIZQNJYHREISFGCUBIB45C43WCWYU3DZ0FHJH2AY5
 
 oc login "$hostname" --insecure-skip-tls-verify -u "$clusteradmin" -p "$clusteradminpass"
 oc new-project quay-enterprise
@@ -27,7 +27,7 @@ oc new-app \
 -e MYSQL_DATABASE=enterpriseregistrydb \
 -e MYSQL_ROOT_PASSWORD=coreosuser \
 docker.io/mysql:5.7
-oc secrets new-dockercfg coreos-pull-secret --docker-server=quay.io --docker-username="$quayiouser"  --docker-password="$quayiopassword" --docker-email="$quayiouser"
+oc create secret new-dockercfg coreos-pull-secret --docker-server=quay.io --docker-username="$quayiouser"  --docker-password="$quayiopassword" --docker-email="$quayiouser"
 oc create -f quay-enterprise-config-secret.yml
 oc create -f quay-enterprise-app-rc.yml
 oc create -f quay-enterprise-service.yml

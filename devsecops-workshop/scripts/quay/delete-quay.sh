@@ -1,8 +1,8 @@
 #!/bin/bash
 
-hostname=
-clusteradmin=
-clusteradminpass=
+hostname=https://master.stratcom-d547.open.redhat.com
+clusteradmin=opentlc-mgr
+clusteradminpass=r3dh4t1!
 
 oc login "$hostname" --insecure-skip-tls-verify -u "$clusteradmin" -p "$clusteradminpass"
 
