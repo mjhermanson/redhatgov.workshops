@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x 
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -12,7 +12,7 @@ source "$DIR/provision-batch-init.sh"
 check-hostname
 
 for (( i = $begin; i <= $count; i++ )); do
- oc login "$hostname" --insecure-skip-tls-verify -u "$username${i}" -p "$password${i}"
+ oc login "$hostname" --insecure-skip-tls-verify -u "$username${i}" -p "$password"
  oc delete service sonarqube && oc delete deploymentconfigs sonarqube && oc delete route sonarqube && oc delete imagestreams sonarqube && oc delete pvc sonarqube-data
  oc new-app -f http://bit.ly/openshift-sonarqube-embedded-template --param=SONARQUBE_VERSION=7.0 --param=SONAR_MAX_MEMORY=4Gi
  sleep "$pause"

@@ -1,0 +1,244 @@
+kind: Build
+apiVersion: build.openshift.io/v1
+metadata:
+  annotations:
+    openshift.io/build-config.name: tasks-pipeline-preloaded
+    openshift.io/build.number: '17'
+    openshift.io/jenkins-blueocean-log-url: >-
+      https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/blue/organizations/jenkins/cicd%2Fcicd-tasks-pipeline-preloaded/detail/cicd-tasks-pipeline-preloaded/17/
+    openshift.io/jenkins-build-uri: >-
+      https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/
+    openshift.io/jenkins-console-log-url: >-
+      https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/console
+    openshift.io/jenkins-log-url: >-
+      https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/consoleText
+    openshift.io/jenkins-status-json: >-
+      {"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/wfapi/describe"},"changesets":null,"pendingInputActions":null,"nextPendingInputAction":null,"artifacts":null},"id":"17","name":"#17","status":"FAILED","startTimeMillis":1572281719368,"endTimeMillis":1572281876763,"durationMillis":157395,"queueDurationMillis":14,"pauseDurationMillis":0,"stages":[{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/6/wfapi/describe"},"log":null},"id":"6","name":"Build
+      App","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281766456,"durationMillis":59350,"pauseDurationMillis":0,"stageFlowNodes":[{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/7/wfapi/describe"},"log":null},"id":"7","name":"Git","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281766653,"durationMillis":18712,"pauseDurationMillis":0,"parentNodes":["6"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/10/wfapi/describe"},"log":null},"id":"10","name":"Read
+      a maven project
+      file.","execNode":"","status":"SUCCESS","error":null,"parameterDescription":"pom.xml","startTimeMillis":1572281785451,"durationMillis":104,"pauseDurationMillis":0,"parentNodes":["9"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/13/wfapi/describe"},"log":null},"id":"13","name":"Shell
+      Script","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281785659,"durationMillis":40132,"pauseDurationMillis":0,"parentNodes":["12"]}],"allChildNodeIds":["7","8","9","10","11","12","13"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/17/wfapi/describe"},"log":null},"id":"17","name":"Test","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281825864,"durationMillis":8598,"pauseDurationMillis":0,"stageFlowNodes":[{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/18/wfapi/describe"},"log":null},"id":"18","name":"Shell
+      Script","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281826752,"durationMillis":6423,"pauseDurationMillis":0,"parentNodes":["17"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/19/wfapi/describe"},"log":null},"id":"19","name":"Publish
+      JUnit test result
+      report","execNode":"","status":"SUCCESS","error":null,"parameterDescription":"**/target/surefire-reports/TEST-*.xml","startTimeMillis":1572281833175,"durationMillis":1262,"pauseDurationMillis":0,"parentNodes":["18"]}],"allChildNodeIds":["18","19"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/23/wfapi/describe"},"log":null},"id":"23","name":"Code
+      Analysis","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281834563,"durationMillis":11691,"pauseDurationMillis":0,"stageFlowNodes":[{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/26/wfapi/describe"},"log":null},"id":"26","name":"Shell
+      Script","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281834850,"durationMillis":11290,"pauseDurationMillis":0,"parentNodes":["25"]}],"allChildNodeIds":["24","25","26","27","28"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/32/wfapi/describe"},"log":null},"id":"32","name":"Archive
+      App","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281846271,"durationMillis":5626,"pauseDurationMillis":0,"stageFlowNodes":[{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/33/wfapi/describe"},"log":null},"id":"33","name":"Shell
+      Script","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281846366,"durationMillis":5519,"pauseDurationMillis":0,"parentNodes":["32"]}],"allChildNodeIds":["33"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/48/wfapi/describe"},"log":null},"id":"48","name":"Build
+      Image","execNode":"","status":"FAILED","error":{"message":"Error running
+      start-build on at least one item: [buildconfig/tasks];\n{reference={},
+      err=Uploading directory \"oc-build\" as binary input for the build
+      ...\nError from server (Forbidden): forbidden: User
+      \"system:serviceaccount:cicd:jenkins\" cannot post path
+      \"/oapi/v1/namespaces/cicd/buildconfigs/tasks/instantiatebinary\"\n,
+      verb=start-build, cmd=oc --server=https://172.30.0.1:443
+      --certificate-authority=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      --namespace=cicd --token=XXXXX start-build buildconfig/tasks
+      --from-dir=oc-build --wait=true -o=name , out=,
+      status=1}\n","type":"hudson.AbortException"},"parameterDescription":null,"startTimeMillis":1572281872554,"durationMillis":2809,"pauseDurationMillis":0,"stageFlowNodes":[{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/49/wfapi/describe"},"log":null},"id":"49","name":"Shell
+      Script","execNode":"","status":"SUCCESS","error":null,"parameterDescription":"rm
+      -rf oc-build && mkdir -p
+      oc-build/deployments","startTimeMillis":1572281873359,"durationMillis":367,"pauseDurationMillis":0,"parentNodes":["48"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/50/wfapi/describe"},"log":null},"id":"50","name":"Shell
+      Script","execNode":"","status":"SUCCESS","error":null,"parameterDescription":"cp
+      target/openshift-tasks.war
+      oc-build/deployments/ROOT.war","startTimeMillis":1572281873726,"durationMillis":292,"pauseDurationMillis":0,"parentNodes":["49"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/53/wfapi/describe"},"log":null},"id":"53","name":"Internal
+      utility function for OpenShift
+      DSL","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281874038,"durationMillis":24,"pauseDurationMillis":0,"parentNodes":["52"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/54/wfapi/describe"},"log":null},"id":"54","name":"Internal
+      utility function for OpenShift
+      DSL","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281874062,"durationMillis":104,"pauseDurationMillis":0,"parentNodes":["53"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/55/wfapi/describe"},"log":null},"id":"55","name":"Read
+      file from
+      workspace","execNode":"","status":"SUCCESS","error":null,"parameterDescription":"/var/run/secrets/kubernetes.io/serviceaccount/token","startTimeMillis":1572281874166,"durationMillis":90,"pauseDurationMillis":0,"parentNodes":["54"]},{"_links":{"self":{"href":"https://jenkins-cicd.apps.cluster-mgmwerx-d39b.mgmwerx-d39b.example.opentlc.com/job/cicd/job/cicd-tasks-pipeline-preloaded/17/execution/node/56/wfapi/describe"},"log":null},"id":"56","name":"Internal
+      utility function for OpenShift
+      DSL","execNode":"","status":"SUCCESS","error":null,"parameterDescription":null,"startTimeMillis":1572281874256,"durationMillis":897,"pauseDurationMillis":0,"parentNodes":["55"]}],"allChildNodeIds":["49","50","51","52","53","54","55","56","57","58"]}]}
+  selfLink: >-
+    /apis/build.openshift.io/v1/namespaces/cicd/builds/tasks-pipeline-preloaded-17
+  resourceVersion: '1301349'
+  name: tasks-pipeline-preloaded-17
+  uid: b868898f-f9a3-11e9-9aca-0a580a80007d
+  creationTimestamp: '2019-10-28T16:55:18Z'
+  namespace: cicd
+  ownerReferences:
+    - apiVersion: build.openshift.io/v1
+      kind: BuildConfig
+      name: tasks-pipeline-preloaded
+      uid: b223a01d-f53c-11e9-b3e7-0a580a80005b
+      controller: true
+  labels:
+    app: cicd-pipeline
+    buildconfig: tasks-pipeline-preloaded
+    group: cicd
+    name: cicd-pipeline
+    openshift.io/build-config.name: tasks-pipeline-preloaded
+    openshift.io/build.start-policy: Serial
+    template: cicd
+    template.openshift.io/template-instance-owner: b2100a25-f53c-11e9-ad91-0a580a820083
+spec:
+  serviceAccount: builder
+  source:
+    type: None
+  strategy:
+    type: JenkinsPipeline
+    jenkinsPipelineStrategy:
+      jenkinsfile: |-
+        def version, mvnCmd = "mvn -s configuration/cicd-settings-nexus3.xml"
+
+        pipeline {
+          agent {
+            label 'maven'
+          }
+          stages {
+            stage('Build App') {
+              steps {
+                git branch: 'eap-7', url: 'http://gogs:3000/gogs/openshift-tasks.git'
+                script {
+                    def pom = readMavenPom file: 'pom.xml'
+                    version = pom.version
+                }
+                sh "${mvnCmd} install -DskipTests=true"
+              }
+            }
+            stage('Test') {
+              steps {
+                sh "${mvnCmd} test"
+                step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+              }
+            }
+            stage('Code Analysis') {
+              steps {
+                script {
+                  sh "${mvnCmd} sonar:sonar -Dsonar.host.url=http://sonarqube:9000 -DskipTests=true -Dsonar.login=0aa6c27055cc23a77e5b1cf3e9495fefda0f1594"
+
+                }
+              }
+            }
+            stage('Archive App') {
+              steps {
+                sh "${mvnCmd} deploy -DskipTests=true -P nexus3"
+              }
+            }
+            stage('Create Image Builder') {
+              when {
+                expression {
+                  openshift.withCluster() {
+                    openshift.withProject(env.DEV_PROJECT) {
+                      return !openshift.selector("bc", "tasks").exists();
+                    }
+                  }
+                }
+              }
+              steps {
+                script {
+                  openshift.withCluster() {
+                    openshift.withProject(env.DEV_PROJECT) {
+                      openshift.newBuild("--name=tasks", "--image-stream=jboss-eap70-openshift:1.5", "--binary=true")
+                    }
+                  }
+                }
+              }
+            }
+            stage('Build Image') {
+              steps {
+                sh "rm -rf oc-build && mkdir -p oc-build/deployments"
+                sh "cp target/openshift-tasks.war oc-build/deployments/ROOT.war"
+
+                script {
+ #                 openshift.withCluster() {
+ #                   openshift.withProject(env.DEV_PROJECT) {
+ #                     openshift.selector("bc", "tasks").startBuild("--from-dir=oc-build", "--wait=true")      }
+#                  }
+#           
+                    sh "oc --namespace=env.DEV_PROJECT --server=https://172.30.0.1:443 --certificate-authority=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt --token=1c6cczzDWvtfWP5ecdqdmKlRZLCDTerxxD9-9HTLIe8 start-build buildconfig/tasks --from-dir=oc-build --wait=true -o=name"
+                  }
+                }
+              }
+            }
+            stage('Create DEV') {
+              when {
+                expression {
+                  openshift.withCluster() {
+                    openshift.withProject(env.DEV_PROJECT) {
+                      return !openshift.selector('dc', 'tasks').exists()
+                    }
+                  }
+                }
+              }
+              steps {
+                script {
+                  openshift.withCluster() {
+                    openshift.withProject(env.DEV_PROJECT) {
+                      def app = openshift.newApp("tasks:latest")
+                      app.narrow("svc").expose();
+
+                      def dc = openshift.selector("dc", "tasks")
+                      while (dc.object().spec.replicas != dc.object().status.availableReplicas) {
+                          sleep 10
+                      }
+                      openshift.set("triggers", "dc/tasks", "--manual")
+                    }
+                  }
+                }
+              }
+            }
+            stage('Deploy DEV') {
+              steps {
+                script {
+                  openshift.withCluster() {
+                    openshift.withProject(env.DEV_PROJECT) {
+                      openshift.selector("dc", "tasks").rollout().latest();
+                    }
+                  }
+                }
+              }
+            }
+            stage('Promote to STAGE?') {
+              steps {
+                timeout(time:15, unit:'MINUTES') {
+                    input message: "Promote to STAGE?", ok: "Promote"
+                }
+
+                script {
+                  openshift.withCluster() {
+                    openshift.tag("${env.DEV_PROJECT}/tasks:latest", "${env.STAGE_PROJECT}/tasks:${version}")
+                  }
+                }
+              }
+            }
+            stage('Deploy STAGE') {
+              steps {
+                script {
+                  openshift.withCluster() {
+                    openshift.withProject(env.STAGE_PROJECT) {
+                      if (openshift.selector('dc', 'tasks').exists()) {
+                        openshift.selector('dc', 'tasks').delete()
+                        openshift.selector('svc', 'tasks').delete()
+                        openshift.selector('route', 'tasks').delete()
+                      }
+
+                      openshift.newApp("tasks:${version}").narrow("svc").expose()
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      env:
+        - name: DEV_PROJECT
+          value: cicd
+        - name: STAGE_PROJECT
+          value: stage
+  output: {}
+  resources: {}
+  postCommit: {}
+  nodeSelector: {}
+  triggeredBy:
+    - message: Manually triggered
+status:
+  phase: Failed
+  startTimestamp: '2019-10-28T16:55:19Z'
+  completionTimestamp: '2019-10-28T16:57:56Z'
+  config:
+    kind: BuildConfig
+    namespace: cicd
+    name: tasks-pipeline-preloaded
+  output: {}
