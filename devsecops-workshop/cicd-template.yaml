@@ -240,7 +240,7 @@ objects:
         <containers>
           <org.csanchez.jenkins.plugins.kubernetes.ContainerTemplate>
             <name>jnlp</name>
-            <image>registry.access.redhat.com/openshift4/jenkins-slave-maven-rhel7</image>
+            <image>registry.redhat.io/openshift4/ose-jenkins-agent-maven</image>
             <privileged>false</privileged>
             <alwaysPullImage>false</alwaysPullImage>
             <workingDir>/tmp</workingDir>
