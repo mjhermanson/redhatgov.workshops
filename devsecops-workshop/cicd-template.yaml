@@ -290,17 +290,17 @@ objects:
                 --param=HOSTNAME=$GOGS_HOSTNAME \
                 --param=SKIP_TLS_VERIFY=true
 
-           # if [ "${EPHEMERAL}" == "true" ] ; then
-           #   oc new-app -f https://raw.githubusercontent.com/mjhermanson/redhatgov.workshops/ocp-4.2/devsecops-workshop/gogs-template.yaml \
-           #       --param=GOGS_VERSION=0.11.34 \
-           #       --param=HOSTNAME=$GOGS_HOSTNAME \
-           #       --param=SKIP_TLS_VERIFY=true
-           # else
-           #   oc new-app -f https://raw.githubusercontent.com/mjhermanson/redhatgov.workshops/ocp-4.2/devsecops-workshop/gogs-persistent-template.yaml \
-           #       --param=GOGS_VERSION=0.11.34 \
-           #       --param=HOSTNAME=$GOGS_HOSTNAME \
-           #       --param=SKIP_TLS_VERIFY=true
-           # fi
+            # if [ "${EPHEMERAL}" == "true" ] ; then
+            #   oc new-app -f https://raw.githubusercontent.com/mjhermanson/redhatgov.workshops/ocp-4.2/devsecops-workshop/gogs-template.yaml \
+            #       --param=GOGS_VERSION=0.11.34 \
+            #       --param=HOSTNAME=$GOGS_HOSTNAME \
+            #       --param=SKIP_TLS_VERIFY=true
+            # else
+            #   oc new-app -f https://raw.githubusercontent.com/mjhermanson/redhatgov.workshops/ocp-4.2/devsecops-workshop/gogs-persistent-template.yaml \
+            #       --param=GOGS_VERSION=0.11.34 \
+            #       --param=HOSTNAME=$GOGS_HOSTNAME \
+            #       --param=SKIP_TLS_VERIFY=true
+            # fi
 
             sleep 5
 
