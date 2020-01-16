@@ -3,7 +3,7 @@
 if ! $(oc whoami &>/dev/null); then
  printf "%s\n" "###############################################################################"
  printf "%s\n" "#  MAKE SURE YOU ARE LOGGED IN TO AN OPENSHIFT CLUSTER:                       #"
- printf "%s\n" "#  $ oc login https://your-openshift-cluster:8443                             #"
+ printf "%s\n" "#  $ oc login https://your-openshift-cluster:6443                             #"
  printf "%s\n" "###############################################################################"
  exit 1
 fi
